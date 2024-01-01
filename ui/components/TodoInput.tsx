@@ -7,8 +7,8 @@ import { create } from "@/app/actions/todoActions";
 const AddTodo = () => {
   return (
     <Form action={create} className="w-2/3 flex justify-center h-12">
-        <Input name="todoInput" type="text" placeholder="Add Todo..." />
-        <Button type="submit" text="Add" className="px-5"/>
+        <Input name="todoInput" type="text" placeholder="Add Todo..." className="px-5 md:px-10"/>
+        <Button type="submit" text="Add" className="px-5 md:px-10"/>
     </Form>
   );
 };

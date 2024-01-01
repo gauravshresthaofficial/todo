@@ -17,10 +17,12 @@ const Todo = async ({ todo }: { todo: todoType }) => {
   const todoStyle = {
     textDecoration: todo.isCompleted === true ? "line-through" : "none",
     opacity: todo.isCompleted ? 0.5 : 1,
+    backgroundColor: todo.color || undefined,
+    
   };
   return (
     <div
-      style={{ backgroundColor: todo.color, ...todoStyle }}
+      style={{  ...todoStyle }}
       className="relative flex flex-col-reverse md:flex-col justify-between w-full rounded-2xl h-full"
     >
       <div className="flex justify-around py-4 md:border-b-2 border-white w-full">

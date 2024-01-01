@@ -10,13 +10,14 @@ const CurrentDate: React.FC<CurrentDateProps> = ({ className }: CurrentDateProps
 
   useEffect(() => {
     const now = new Date();
-    const options = {
+    const options: Intl.DateTimeFormatOptions = {
       weekday: "long",
       year: "numeric",
       month: "long",
       day: "numeric",
     };
     const formattedDate = now.toLocaleDateString(undefined, options);
+    
     setCurrentDate(formattedDate);
   }, []);
 
