@@ -1,7 +1,11 @@
 "use client";
 import React, { useEffect, useState } from "react";
 
-const CurrentDate = ({ className }) => {
+interface CurrentDateProps {
+  className?: string;
+}
+
+const CurrentDate: React.FC<CurrentDateProps> = ({ className }: CurrentDateProps) => {
   const [currentDate, setCurrentDate] = useState("");
 
   useEffect(() => {
