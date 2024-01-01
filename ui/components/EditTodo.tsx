@@ -4,6 +4,7 @@ import Form from "./Form";
 import Input from "./Input";
 import Button from "./Button";
 import { useState } from "react";
+import { ChangeEvent } from "react";
 import { BiEdit } from "react-icons/bi";
 
 interface todoType {
@@ -20,7 +21,7 @@ const EditTodo = ({ todo }: { todo: todoType }) => {
   const handleEdit = () => {
     todo.isCompleted ? "return" : setEditTodo(!editTodo);
   };
-  const handleTitleChange = (e) => {
+  const handleTitleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setEditedTitle(e.target.value);
     // Add any other logic you need when the title changes
   };
