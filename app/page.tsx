@@ -10,7 +10,7 @@ async function getData() {
       id: true,
       isCompleted: true,
       title: true,
-      color:true
+      color: true,
     },
     orderBy: {
       createdAt: "desc",
@@ -22,8 +22,8 @@ const Home = async () => {
   const data = await getData();
   return (
     <>
-      <div className="w-full min-h-full bg-green-200 absolute top-0 left-0 -z-0 pb-20 pt-5">
-      <div className="w-4/5 z-10 pt:30 md:pt-60 mx-auto flex flex-wrap gap-5 md:gap-10 justify-center">
+      <div className="w-full min-h-full bg-white absolute top-0 left-0 -z-0 pb-20 pt-5">
+        <div className="w-4/5 z-10 pt:30 md:pt-60 mx-auto flex flex-wrap gap-5 md:gap-10 justify-center">
           {data.map((todo, id) => (
             <div className="w-full md:w-[25%] h-40" key={id}>
               <Todo todo={todo} />
@@ -32,16 +32,15 @@ const Home = async () => {
         </div>
       </div>
       <div className="w-full">
-        <div className="absolute bg-yellow-300 h-44 md:h-56 w-full top-0 left-0 -z-0 rounded-b-[50px] flex justify-center pt-24 md:pt-36 shadow-sm drop-shadow-xl">
+        <div className="absolute bg-yellow-300 h-44 md:h-56 w-full top-0 left-0 -z-0 rounded-b-[50px] flex justify-center pt-24 md:pt-36 shadow-sm drop-shadow-sm">
           <TodoInput />
         </div>
-
       </div>
-      <div className="absolute text-white left-5 top-5  w-full flex justify-between px-20">
+      <div className="absolute left-0 top-0 pt-5  w-full flex justify-center md:justify-between md:px-20">
         <p className="font-medium text-xl drop-shadow-md bg-white px-4 py-1 rounded-full text-yellow-500">
-        Gaurav Shrestha
+          Gaurav Shrestha
         </p>
-        <CurrentDate className="font-medium text-xl drop-shadow-md bg-white px-4 py-1 rounded-full text-yellow-500 hidden md:block"/>
+        <CurrentDate className="font-medium text-xl drop-shadow-md bg-white px-4 py-1 rounded-full text-yellow-500 hidden md:block" />
       </div>
     </>
   );

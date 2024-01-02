@@ -1,5 +1,5 @@
 import React from 'react'
-import {BsFillTrashFill} from "react-icons/bs"
+import {MdOutlineDeleteOutline} from "react-icons/md"
 import Form from './Form';
 import Input from './Input';
 import Button from './Button';
@@ -16,7 +16,7 @@ const DeleteTodo = ({todo}: {todo : todoType} ) => {
     return (
       <Form action={deleteTodo}>
           <Input name="inputId" value={todo.id} type="hidden"/>
-          <Button actionButton className='bg-transparent w-auto px-0' type="submit" text={<BsFillTrashFill color="white" fontSize="1.2rem"/>}/>
+          <Button actionButton className='bg-transparent w-auto px-0 py-0 my-0 opacity-75' type="submit" text={<MdOutlineDeleteOutline color="#154c79" fontSize="1.5rem"/>}/>
       </Form>
     )
   }

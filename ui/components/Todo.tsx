@@ -25,14 +25,14 @@ const Todo = async ({ todo }: { todo: todoType }) => {
       style={{  ...todoStyle }}
       className="relative flex flex-col-reverse md:flex-col justify-between w-full rounded-2xl h-full drop-shadow-md"
     >
-      <div className="flex justify-around py-4 md:border-b-2 border-white w-full">
+      <div className="flex justify-around py-2 md:border-b-2 border-white w-full border-t-2 md:border-t-0">
         <DeleteTodo todo={todo} />
         <EditTodo todo={todo} />
         {/* <div className="absolute right-0 top-0"> */}
         <ChangeTodo todo={todo} className="" />
         {/* </div> */}
       </div>
-      <h3 className="flex-grow font-bold md:py-2 p-3 overflow-hidden text-white">
+      <h3 className="flex-grow font-semibold md:py-2 p-3 overflow-hidden text-[#063970] drop-shadow-sm">
         {todo.title}
       </h3>
     </div>

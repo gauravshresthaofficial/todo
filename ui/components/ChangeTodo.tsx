@@ -25,7 +25,7 @@ const ChangeTodo = ({ todo ,className} : ChangeTodoProps) => {
         actionButton
         className={`bg-transparent px-0 ${className}`}
         type="submit"
-        text={<AiOutlineCheckCircle color="white" fontSize="1.2rem" />}
+        text={<AiOutlineCheckCircle color="#154c79" fontSize="1.2rem" />}
       />
     </Form>
   );

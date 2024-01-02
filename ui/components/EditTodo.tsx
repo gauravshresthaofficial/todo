@@ -33,7 +33,7 @@ const EditTodo = ({ todo }: { todo: todoType }) => {
     <div className="flex gap-5 items-center">
       <Button
         onClick={handleEdit}
-        text={<BiEdit color="white" fontSize="1.2rem" />}
+        text={<BiEdit color="#154c79" fontSize="1.2rem" />}
         actionButton
         className="bg-transparent w-auto px-0"
       />
