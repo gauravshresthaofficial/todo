@@ -23,7 +23,7 @@ const Todo = async ({ todo }: { todo: todoType }) => {
   return (
     <div
       style={{  ...todoStyle }}
-      className="relative flex flex-col-reverse md:flex-col justify-between w-full rounded-2xl h-full"
+      className="relative flex flex-col-reverse md:flex-col justify-between w-full rounded-2xl h-full drop-shadow-md"
     >
       <div className="flex justify-around py-4 md:border-b-2 border-white w-full">
         <DeleteTodo todo={todo} />

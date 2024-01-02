@@ -26,6 +26,10 @@ export async function create(formData: FormData) {
 
   try {
     const input = formData.get("todoInput") as string;
+    if(input === "")
+    {
+      return;
+    }
 
     // Use createOne for MongoDB
     await prisma.todo.create({
